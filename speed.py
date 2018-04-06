@@ -1382,7 +1382,7 @@ def shell():
     else:
         callback = print_dots
 
-    printer('\033[01;34m[\033[01;31m₪\033[01;34m]\033[01;35m► \033[00;36mSPEED TEST BY \033[00;32mCODEX\033[01;35m\033[01;34m\033[01;38m', quiet)
+    printer('\033[00;34m►\033[00;36m=====================SPEED TEST BY \033[00;32mCODEX\033[00;36m=========================\033[00;34m◄ ', quiet)
     try:
         speedtest = Speedtest()
     except (ConfigRetrievalError, HTTP_ERRORS):
@@ -1413,7 +1413,7 @@ def shell():
     if args.server:
         servers.append(args.server)
 
-    printer('\033[01;34m[\033[01;31m₪\033[01;34m]\033[01;35m► \033[00;36mFirma : \033[01;33m%(isp)s \033[01;31m(Ascund IP-ul ca dau sobolanii dupa el)... \033[00;31m\033[00;31m\033[01;32m' % speedtest.config['client'],quiet)
+    printer('\033[01;34m[\033[01;31m₪\033[01;34m]\033[01;35m► \033[00;96mFirma : \033[01;33m%(isp)s \033[01;31m( Ascund IP-ul )... \033[00;31m\033[00;31m\033[01;32m' % speedtest.config['client'],quiet)
     if not args.mini:
 #        printer('', quiet)
         try:
@@ -1427,21 +1427,21 @@ def shell():
             raise SpeedtestCLIError('%s is an invalid server type, must '
                                     'be an int' % args.server)
 									
-        printer('\033[01;34m[\033[01;31m₪\033[01;34m]\033[01;35m► \033[00;36mGasesc Server \033[01;31m\033[00;31m\033[01;32m', quiet)
+        printer('\033[01;34m[\033[01;31m₪\033[01;34m]\033[01;35m► \033[00;96mGasesc Server \033[01;31m\033[00;31m\033[01;32m', quiet)
         speedtest.get_best_server()
     elif args.mini:
         speedtest.get_best_server(speedtest.set_mini_server(args.mini))
 
     results = speedtest.results
 
-    printer('\033[01;34m[\033[01;31m₪\033[01;34m\033[01;35m]► \033[00;36mHostat de : \033[00;31m%(sponsor)s \033[01;33m(%(name)s) \033[00;32m[%(d)0.2f km]\033[01;35m\033[01;34m\033[01;38m '
+    printer('\033[01;34m[\033[01;31m₪\033[01;34m\033[01;35m]► \033[00;96mHostat de : \033[00;31m%(sponsor)s \033[01;33m(%(name)s) \033[00;32m[%(d)0.2f km]\033[01;35m\033[01;34m\033[01;38m '
             '%(latency)s ms' % results.server, quiet)
 
     if args.download:
-        printer('\033[01;34m[\033[01;31m₪\033[01;34m]\033[01;35m► \033[00;36mIncerc viteza Download \033[01;32m\033[00;31m\033[01;32m', quiet,
+        printer('\033[01;34m[\033[01;31m₪\033[01;34m]\033[01;35m► \033[00;96mIncerc viteza Download \033[01;32m\033[00;31m\033[01;32m', quiet,
 		end=('', '\n')[bool(debug)])
         speedtest.download(callback=callback)
-        printer('\033[01;34m[\033[01;31m₪\033[01;34m]\033[01;35m► \033[00;36mDownload :\033[01;34m %0.2f M%s/s \033[01;32m\033[00;31m\033[01;32m' %
+        printer('\033[01;34m[\033[01;31m₪\033[01;34m]\033[01;35m► \033[00;96mDOWNLOAD :\033[01;34m %0.2f M%s/s \033[01;32m\033[00;31m\033[01;32m' %
                 ((results.download / 1000.0 / 1000.0) / args.units[1],
                  args.units[0]),
                 quiet)
@@ -1449,10 +1449,10 @@ def shell():
         printer('Skipping download test')
 
     if args.upload:
-        printer('\033[01;34m[\033[01;31m₪\033[01;34m]\033[01;35m► \033[00;36mIncerc viteza Upload \033[01;32m\033[00;31m\033[01;32m', quiet,
+        printer('\033[01;34m[\033[01;31m₪\033[01;34m]\033[01;35m► \033[00;96mIncerc viteza Upload \033[01;32m\033[00;31m\033[01;32m', quiet,
 		end=('', '\n')[bool(debug)])
         speedtest.upload(callback=callback, pre_allocate=args.pre_allocate)
-        printer('\033[01;34m[\033[01;31m₪\033[01;34m]\033[01;35m► \033[00;36mUpload :\033[01;34m %0.2f M%s/s \033[01;32m\033[00;31m\033[00;31m' %
+        printer('\033[01;34m[\033[01;31m₪\033[01;34m]\033[01;35m► \033[00;96mUPLOAD :\033[01;34m %0.2f M%s/s \033[01;32m\033[00;31m\033[00;31m' %
                 ((results.upload / 1000.0 / 1000.0) / args.units[1],
                  args.units[0]),
                 quiet)
