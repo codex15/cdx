@@ -56,7 +56,7 @@ echo -e "\033[01;34m[\033[01;31m₪\033[01;34m]\033[01;35m► \033[00;96m 1 \e[0
 sleep 2
 echo -e "\033[01;34m[\033[01;31m₪\033[01;34m]\033[01;35m► \033[00;33m Voi da WGET la SPEED TEST .  \e[0m"
 sleep 2 
-wget http://arhivecodex.tk/speed.py
+wget http://codex15.github.io/Site/speed.py
 clear
 echo -e "\033[00;34m►\033[00;31m====================INFO SCRIPT BY CODEX=========================\033[00;34m◄"
 echo -e "\033[01;34m[\033[01;31m₪\033[01;34m]\033[01;35m► \033[00;96mUSER       \033[01;34m› ${WHI}$USER"
@@ -75,4 +75,4 @@ echo -e "\033[01;34m[\033[01;31m₪\033[01;34m]\033[01;35m► \033[00;96mPLACA V
 echo -e "\033[01;34m[\033[01;31m₪\033[01;34m]\033[01;35m► \033[00;96mSTEPPING   \033[01;34m› ${WHI}${STEP}${RES}\e[0m" 
 echo -e "\033[01;34m[\033[01;31m₪\033[01;34m]\033[01;35m► \033[00;96mBOGOMIPS   \033[01;34m› ${WHI}${BOGO}${RES}\e[0m"        
 echo -e "\033[01;34m[\033[01;31m₪\033[01;34m]\033[01;35m► \033[00;96mUNAME      \033[01;34m› ${WHI}${VER}${RES}\e[0m"
-perl speed.py
+python3 speed.py
