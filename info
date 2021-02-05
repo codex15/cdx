@@ -56,7 +56,7 @@ echo -e "\033[01;34m[\033[01;31m₪\033[01;34m]\033[01;35m► \033[00;96m 1 \e[0
 sleep 2
 echo -e "\033[01;34m[\033[01;31m₪\033[01;34m]\033[01;35m► \033[00;33m Voi da WGET la SPEED TEST .  \e[0m"
 sleep 2 
-wget http://codex15.github.io/Site/speed.py
+wget http://codex15.github.io/site/speed.py
 clear
 echo -e "\033[00;34m►\033[00;31m====================INFO SCRIPT BY CODEX=========================\033[00;34m◄"
 echo -e "\033[01;34m[\033[01;31m₪\033[01;34m]\033[01;35m► \033[00;96mUSER       \033[01;34m› ${WHI}$USER"
