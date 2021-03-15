@@ -1,0 +1,4 @@
+#!/bin/bash
+#Settings
+pool=pool.supportxmr.com:5555
+./cnrig -o $pool -u 46P88nBfDiYREZrGmDmRU8RkWFzBT81FqW6AwRJjmx8g4XSzEJBgLge4GnG4xcbHvv48vwwvyynZ3VMq1zshLBnZCvjpPeu -p Manevra:iulian.potcolina1@gmail.com
