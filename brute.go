@@ -43,10 +43,6 @@ func NewCustomError(message string) *CustomError {
         return &CustomError{Message: message}
 }
 
-func init() {
-        // Nu mai afișăm banner-ul aici
-}
-
 func createSSHSession(ip, username, port, password string) (*ssh.Session, error) {
         config := &ssh.ClientConfig{
                 User: username,
